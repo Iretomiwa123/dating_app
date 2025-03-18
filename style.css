@@ -355,7 +355,7 @@ hr {
 
 @media (max-width:768px) {
     .text-content {
-        padding-top: 200px
+        padding-top: 150px
     }
     .text-content h1 {
         font-size: 36px
@@ -386,7 +386,7 @@ hr {
 
 @media (max-width:576px) {
     header {
-        height: 70vh
+        height: 80vh
     }
     .navbar {
         padding: 10px
