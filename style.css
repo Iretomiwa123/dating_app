@@ -403,11 +403,8 @@ hr {
     p {
         font-size: 12px
     }
-    footer .foot {
-        flex-direction: column;
-        text-align: center
-    }
-    footer .links {
-        margin-bottom: 10px
+    .foot .links {
+        margin-bottom: 10px;
+        display: none;
     }
 }
