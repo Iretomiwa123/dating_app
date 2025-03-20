@@ -20,20 +20,21 @@ header {
     height: 100%;
     background: rgb(255 215 223 / .2)
 }
-
+.thead {
+    padding: 100px;
+}
 .text-content {
     position: relative;
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
     z-index: 2;
-    padding-top: 100px
 }
 
 .text-content h1 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 66px;
     margin: 20px auto
 }
 
@@ -72,12 +73,12 @@ nav {
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    text-align: center
+    text-align: center;
+    gap: 20px
 }
 
 .nav-item {
     display: inline-block;
-    margin: 0 20px
 }
 
 .nav-link {
@@ -91,11 +92,8 @@ nav {
 
 .nav-link:hover {
     background-color: #ffcbbe;
-    padding: 15px 36px;
-    font-size: 14px;
+    padding: auto 10px;
     border-radius: 25px;
-    cursor: pointer;
-    gap: 10px;
     cursor: pointer;
     transition: none !important
 }
@@ -143,8 +141,8 @@ nav {
     background-color: #FFD7DF
 }
 
-.safe {
-    padding: 50px;
+.safe, .tests {
+    padding: 50px ;
     color: #333;
     display: flex;
     align-items: center;
@@ -153,14 +151,16 @@ nav {
     position: relative
 }
 
-.safe .img {
+.safe .img,
+.tests .img {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center
 }
 
-.safe .img img {
+.safe .img img,
+.tests .img img {
     width: 100%;
     height: auto;
     object-fit: cover
@@ -180,7 +180,16 @@ h2 {
     font-size: 56px;
     margin: 20px auto
 }
-
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.red{
+    color: #FF355D;
+}
 p {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -265,6 +274,58 @@ p {
     background: #c61539
 }
 
+.testimonies {
+    margin: 50px;
+}
+.tests {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 40px
+}
+.words{
+    margin-top: 100px !important;
+    margin-bottom: 50px;
+}
+.words h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    
+}
+.carousel-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    gap: 10px;
+    border: 1px solid #333333 !important;
+    color: #333333 !important;
+    padding: 16px;
+    
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 18px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    border:1px solid #FF355D;
+    color: #061D29;
+}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -331,20 +392,26 @@ hr {
 
 @media (max-width:991px) {
     .navbar {
-        width: 100%;
+        width: 90%;
         padding: 10px
     }
-    .text-content {
-        padding-top: 50px;
-        max-width: 90%
+    .thead{
+        padding: 80px;
     }
-    .text-content h1 {
-        font-size: 40px
+    .text-content {
+        max-width: 90%;
+        padding-top: 50px;
+    }
+    .text-content h1{
+        font-size: 42px;
     }
     p {
         font-size: 14px
     }
-    h2 {
+    h4{
+        font-size: 32px;
+    }
+    h2, .words h2 {
         font-size: 36px
     }
     .buttons {
@@ -354,22 +421,32 @@ hr {
 }
 
 @media (max-width:768px) {
-    .text-content {
-        padding-top: 150px
-    }
+  .thead img{
+    height: 100px!important;
+    max-width: 100px;
+  }
     .text-content h1 {
         font-size: 36px
     }
-    h2 {
+    .words{
+        display: block !important;
+        padding: 30px;
+    }
+    h2, .words h2 {
         font-size: 32px
+    }
+    h4{
+        font-size: 28px;
     }
     p {
         font-size: 13px
     }
     .personal,
-    .safe {
+    .safe,
+    .tests {
         flex-direction: column;
-        text-align: center
+        text-align: center;
+        padding: 30px;
     }
     .personal .imge,
     .safe .img,
@@ -385,11 +462,20 @@ hr {
 }
 
 @media (max-width:576px) {
-    header {
-        height: 80vh
-    }
     .navbar {
         padding: 10px
+    }
+    .thead{
+        padding: 100px 20px;
+    }
+
+    .thead img{
+        height: 60px!important;
+        max-width: 60px;
+      }
+    .text-content{
+        padding-top: 80px;
+        width: 100%!important;
     }
     .nav-link {
         font-size: 14px
@@ -399,6 +485,9 @@ hr {
     }
     h2 {
         font-size: 26px
+    }
+    h4{
+        font-size: 22px;
     }
     p {
         font-size: 12px
